@@ -84,6 +84,6 @@ def questionDetail(request, id):
 def deleteOption(request, ques, option):
     question = models.Question.objects.get(id=ques)
     models.Option.objects.get(question=question, id=option).delete()
-    return redirect('quizDetail', id=ques)
+    return redirect('questionDetail', id=ques)
 
 
